@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Favour Oludoyi (FavourCreates) | Web Developer & Digital Support Specialist</title>
+<meta name="description" content="Portfolio of Favour Oludoyi (FavourCreates), a Web Developer and Digital Support Specialist in Lagos, Nigeria, working with WordPress, WooCommerce, Laravel, Vue and graphic design.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5f3;--ink:#12261f;--muted:#4d6159;--line:#cfdad4;--accent:#1d4ed8;--accent-ink:#fff;--panel:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 6%}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.1;margin:0}
+nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;flex-wrap:wrap}
+nav b{font:800 20px 'Bricolage Grotesque',sans-serif}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{text-decoration:underline}
+.hero{padding:70px 0 60px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(48px,11vw,128px);font-weight:800;letter-spacing:-.04em}
+.hero p{max-width:34em;font-size:20px;color:var(--muted);margin:22px 0 0}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:6px;text-decoration:none;font-weight:600;border:2px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+section{padding:64px 0;border-bottom:1px solid var(--line)}
+section h2{font-size:clamp(30px,5vw,44px);margin-bottom:26px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.two p{margin:0 0 14px}
+.stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:8px}
+.stats strong{display:block;font:800 36px 'Bricolage Grotesque',sans-serif;color:var(--accent)}
+.stats span{color:var(--muted);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
+.skills h3{font-size:19px;margin-bottom:8px}
+.skills p{margin:0;color:var(--muted)}
+.jobs{list-style:none;margin:0;padding:0}
+.jobs li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.jobs li:last-child{border-bottom:1px solid var(--line)}
+.jobs time{color:var(--muted)}
+.jobs h3{font-size:20px}
+.jobs p{margin:2px 0 0;color:var(--muted)}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{font:600 15px Figtree,sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.projects{list-style:none;margin:0;padding:0}
+.projects li{border-top:1px solid var(--line)}
+.projects li:last-child{border-bottom:1px solid var(--line)}
+.projects a{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) auto;gap:20px;align-items:baseline;padding:18px 8px;text-decoration:none}
+.projects a:hover{background:var(--panel)}
+.projects h3{font-size:20px}
+.projects small{display:block;color:var(--accent);font-weight:500;font-size:14px;word-break:break-all}
+.projects p{margin:0;color:var(--muted);font-size:16px}
+.tag{font-size:14px;font-weight:600;border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;white-space:nowrap}
+.contact a{color:var(--accent);font-weight:600}
+.contact ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer{padding:30px 0;color:var(--muted);font-size:15px}
+@media(max-width:720px){
+ .two{grid-template-columns:1fr}
+ .jobs li{grid-template-columns:1fr;gap:2px}
+ .projects a{grid-template-columns:1fr;gap:6px}
+ .tag{justify-self:start}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <nav aria-label="Main">
+  <b>FavourCreates</b>
+  <ul>
+   <li><a href="#about">About</a></li>
+   <li><a href="#skills">Skills</a></li>
+   <li><a href="#experience">Experience</a></li>
+   <li><a href="#education">Education</a></li>
+   <li><a href="#projects">Projects</a></li>
+   <li><a href="#contact">Contact</a></li>
+  </ul>
+ </nav>
+
+ <header class="hero">
+  <h1>FavourCreates</h1>
+  <p>Favour Oludoyi, Web Developer and Digital Support Specialist in Lagos. I build and maintain websites and web apps, from WordPress and WooCommerce to Laravel back ends, and bring a graphic design eye to every project.</p>
+  <div class="btns">
+   <a class="btn primary" href="#projects">See my work</a>
+   <a class="btn ghost" href="mailto:favourcreates01@gmail.com">Hire me</a>
+  </div>
+ </header>
+
+ <section id="about">
+  <h2>About</h2>
+  <div class="two">
+   <div>
+    <p>I'm a Web Developer and Digital Support Specialist with extensive experience in WordPress, WooCommerce, IT support and digital administration.</p>
+    <p>With a strong background in graphic design using Canva, Figma, CorelDRAW and Photoshop, I bridge creative design with technical execution. I build and maintain digital experiences that support operational efficiency and put users first.</p>
+   </div>
+   <div class="stats">
+    <div><strong>2020</strong><span>building professionally since</span></div>
+    <div><strong id="count">25+</strong><span>live projects</span></div>
+    <div><strong>30%</strong><span>traffic and engagement increase on a company site</span></div>
+   </div>
+  </div>
+ </section>
+
+ <section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+   <div><h3>Front end</h3><p>HTML5, CSS3, JavaScript, jQuery, Vue, Bootstrap, Tailwind CSS, AJAX</p></div>
+   <div><h3>Back end</h3><p>PHP, Laravel, REST APIs, GraphQL, MySQL, PostgreSQL, MongoDB</p></div>
+   <div><h3>WordPress</h3><p>Custom themes and plugins, WooCommerce, Elementor, Visual Composer</p></div>
+   <div><h3>Design</h3><p>Canva, Figma, CorelDRAW, Adobe Photoshop, UI/UX design</p></div>
+   <div><h3>Tools</h3><p>Git, Docker, IT support, digital administration</p></div>
+  </div>
+ </section>
+
+ <section id="experience">
+  <h2>Experience</h2>
+  <ul class="jobs">
+   <li><time>2020 – Present</time><div><h3>Full Stack Developer</h3><p>Favour Creates, Lagos. A development, consulting and software solutions company.</p><p>Cut server response time by 15% with a GraphQL API, used Vue JS to improve user experience by 20%, led PostgreSQL and MySQL database migration and maintenance, ran code reviews, and managed Git version control across front-end and back-end teams.</p></div></li>
+   <li><time>2020 – Present</time><div><h3>WordPress Developer</h3><p>Clinique Research Ltd / TCIS Africa, Lagos. A fully integrated research organization.</p><p>Increased web traffic and content engagement by 30%, built fast-loading sites with page speed scores above 80%, developed custom themes and plugins, built pages with Elementor and Visual Composer, and managed all of the company's websites.</p></div></li>
+  </ul>
+ </section>
+
+ <section id="education">
+  <h2>Education and training</h2>
+  <ul class="jobs">
+   <li><time>2014 – 2018</time><div><h3>BSc Information Technology</h3><p>Lagos State University</p></div></li>
+   <li><time>Course</time><div><h3>Front-end Application Development with Vue</h3><p>Udemy</p></div></li>
+  </ul>
+ </section>
+
+ <section id="projects">
+  <h2>Projects</h2>
+  <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+  <ul class="projects" id="list"></ul>
+ </section>
+
+ <section id="contact" class="contact">
+  <h2>Contact</h2>
+  <p>Available for freelance work and new roles. Tell me about your project.</p>
+  <ul>
+   <li>Email: <a href="mailto:favourcreates01@gmail.com">favourcreates01@gmail.com</a></li>
+   <li>Phone: <a href="tel:+2349034653514">+234 903 465 3514</a></li>
+   <li>LinkedIn: <a href="https://www.linkedin.com/in/favour-oludoyi-917a02169/">linkedin.com/in/favour-oludoyi-917a02169</a></li>
+   <li>Location: Lagos, Nigeria</li>
+  </ul>
+ </section>
+
+ <footer>© 2026 Favour Oludoyi (FavourCreates). Lagos, Nigeria.</footer>
+</div>
+
+<script>
+// To add a project, copy one line below: [name, website, type, description]
+const projects = [
+ ["Childify","join-childify.com","Full-Stack","A digital staffing platform for the childcare industry."],
+ ["AfriTrials Connect","afritrialsconnect.com","Full-Stack","Connects clinical research sites to cut costs and timelines."],
+ ["CyberPay","cyberpay.net.ng","Backend","Payment platform helping Nigerian businesses process payments securely."],
+ ["Build on the Go","buildonthego.com","Backend","Platform that streamlines construction projects with technology and professional services."],
+ ["AllDrive SOS","alldrivesos.com","Backend","Roadside assistance platform connecting motorists with technicians."],
+ ["Pika Boo","mypikaboo.com","Backend","Lets users schedule and manage waste pick-ups from any location."],
+ ["MyWishlistNG","mywishlistng.com","Backend","Personalized online gift registries for individuals and couples."],
+ ["Announcers.ng","announcers.ng","Backend","Digital tools for event management and business promotion."],
+ ["5M Logistics","5mlogistics.com","Backend","Logistics and freight services for clients worldwide."],
+ ["Ndi Igbo Germany","ndiigbogermany.org","Backend","Community site promoting Igbo culture and unity in Germany."],
+ ["Scouting Africa","scoutingafrica.com","Website","A platform where talented people can be seen, supported and managed."],
+ ["Cyberspace Limited","cyberspace.net.ng","WordPress","Site for a Nigerian technology company offering IT solutions."],
+ ["Everest Spa","everestspa.com.ng","WordPress","Professional spa treatments brought to homes, hotels and events."],
+ ["Wines and Things","winesandthings.com","WordPress","Wines and related products for enthusiasts and events."],
+ ["Bonak Homes","bonakhomes.com","WordPress","Nigerian real estate firm: property sales, rentals and management."],
+ ["Environment Africa Magazine","environmentafricamag.com","WordPress","Magazine on environmental sustainability and climate action in Africa."],
+ ["Deluchi Art and Craft","deluchiartandcraft.com","WordPress","Online store for sculptures, paintings and Ankara accessories."],
+ ["Mogtech Group","mogtech-group.com.ng","WordPress","Holding company with member companies across Nigerian sectors."],
+ ["Wilstech Global","wilstechglobal.com.ng","WordPress","Machines for pure and bottled water production and packaging."],
+ ["HealthShare Nigeria","healthsharenigeria.com","WordPress","Medical equipment and healthcare solutions for private and public sectors."],
+ ["TCIS Africa","tcisafrica.org","WordPress","Network for researchers, CROs, regulators and academia in clinical trials."],
+ ["Alkanes Energy","alkanesenergy.com.ng","WordPress","Support services for upstream oil and gas in Nigeria and West Africa."],
+ ["Cybercloud","cybercloud.net.ng","WordPress","Cloud computing services: IaaS, SaaS and PaaS."],
+ ["MyPlace.ng","myplace.ng","WordPress","Online real estate marketplace connecting seekers with agents and developers."],
+ ["Kenneth Abuah Consult","kennethabuahconsult.ng","WordPress","Estate surveyors and valuers offering real estate services."],
+ ["Cometstar Group","cometstar-group.com","WordPress","Group active in electrical power, industrial gases and mining."]
+];
+const list=document.getElementById('list'),box=document.getElementById('filters');
+const types=['All',...new Set(projects.map(p=>p[2]))];
+function render(t){
+ list.innerHTML=projects.filter(p=>t==='All'||p[2]===t).map(p=>
+  `<li><a href="https://${p[1]}" target="_blank" rel="noopener"><div><h3>${p[0]}</h3><small>${p[1]}</small></div><p>${p[3]}</p><span class="tag">${p[2]}</span></a></li>`).join('');
+ [...box.children].forEach(b=>b.setAttribute('aria-pressed',b.textContent===t));
+}
+types.forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>render(t);box.appendChild(b)});
+document.getElementById('count').textContent=projects.length+'+';
+render('All');
+</script>
+</body>
+</html>
