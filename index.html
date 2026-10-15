@@ -48,14 +48,17 @@ section h2{font-size:clamp(30px,5vw,44px);margin-bottom:26px}
 .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
 .filters button{font:600 15px Figtree,sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.projects{list-style:none;margin:0;padding:0}
-.projects li{border-top:1px solid var(--line)}
-.projects li:last-child{border-bottom:1px solid var(--line)}
-.projects a{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) auto;gap:20px;align-items:baseline;padding:18px 8px;text-decoration:none}
-.projects a:hover{background:var(--panel)}
+.projects{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+.projects a{display:block;height:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;transition:transform .2s,border-color .2s}
+.projects a:hover{transform:translateY(-3px);border-color:var(--accent)}
+.projects img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--line)}
+.pbody{padding:16px 18px 20px}
 .projects h3{font-size:20px}
-.projects small{display:block;color:var(--accent);font-weight:500;font-size:14px;word-break:break-all}
-.projects p{margin:0;color:var(--muted);font-size:16px}
+.projects small{display:block;color:var(--accent);font-weight:500;font-size:14px;word-break:break-all;margin-bottom:8px}
+.projects p{margin:0 0 12px;color:var(--muted);font-size:16px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin:0;padding:0;list-style:none}
+.gallery img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
+.gallery span{display:block;margin-top:6px;color:var(--muted);font-size:15px}
 .tag{font-size:14px;font-weight:600;border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;white-space:nowrap}
 .contact a{color:var(--accent);font-weight:600}
 .contact ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
@@ -63,7 +66,6 @@ footer{padding:30px 0;color:var(--muted);font-size:15px}
 @media(max-width:720px){
  .two{grid-template-columns:1fr}
  .jobs li{grid-template-columns:1fr;gap:2px}
- .projects a{grid-template-columns:1fr;gap:6px}
  .tag{justify-self:start}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -79,6 +81,7 @@ footer{padding:30px 0;color:var(--muted);font-size:15px}
    <li><a href="#experience">Experience</a></li>
    <li><a href="#education">Education</a></li>
    <li><a href="#projects">Projects</a></li>
+   <li id="navdesigns" hidden><a href="#designs">Designs</a></li>
    <li><a href="#contact">Contact</a></li>
   </ul>
  </nav>
@@ -140,6 +143,11 @@ footer{padding:30px 0;color:var(--muted);font-size:15px}
   <ul class="projects" id="list"></ul>
  </section>
 
+ <section id="designs" hidden>
+  <h2>Graphic design</h2>
+  <ul class="gallery" id="gallery"></ul>
+ </section>
+
  <section id="contact" class="contact">
   <h2>Contact</h2>
   <p>Available for freelance work and new roles. Tell me about your project.</p>
@@ -155,40 +163,70 @@ footer{padding:30px 0;color:var(--muted);font-size:15px}
 </div>
 
 <script>
-// To add a project, copy one line below: [name, website, type, description]
+// To add a project, copy one line below: [name, website, type, description, image file name (without .png)]
 const projects = [
- ["Childify","join-childify.com","Full-Stack","A digital staffing platform for the childcare industry."],
- ["AfriTrials Connect","afritrialsconnect.com","Full-Stack","Connects clinical research sites to cut costs and timelines."],
- ["CyberPay","cyberpay.net.ng","Backend","Payment platform helping Nigerian businesses process payments securely."],
- ["Build on the Go","buildonthego.com","Backend","Platform that streamlines construction projects with technology and professional services."],
- ["AllDrive SOS","alldrivesos.com","Backend","Roadside assistance platform connecting motorists with technicians."],
- ["Pika Boo","mypikaboo.com","Backend","Lets users schedule and manage waste pick-ups from any location."],
- ["MyWishlistNG","mywishlistng.com","Backend","Personalized online gift registries for individuals and couples."],
- ["Announcers.ng","announcers.ng","Backend","Digital tools for event management and business promotion."],
- ["5M Logistics","5mlogistics.com","Backend","Logistics and freight services for clients worldwide."],
- ["Ndi Igbo Germany","ndiigbogermany.org","Backend","Community site promoting Igbo culture and unity in Germany."],
- ["Scouting Africa","scoutingafrica.com","Website","A platform where talented people can be seen, supported and managed."],
- ["Cyberspace Limited","cyberspace.net.ng","WordPress","Site for a Nigerian technology company offering IT solutions."],
- ["Everest Spa","everestspa.com.ng","WordPress","Professional spa treatments brought to homes, hotels and events."],
- ["Wines and Things","winesandthings.com","WordPress","Wines and related products for enthusiasts and events."],
- ["Bonak Homes","bonakhomes.com","WordPress","Nigerian real estate firm: property sales, rentals and management."],
- ["Environment Africa Magazine","environmentafricamag.com","WordPress","Magazine on environmental sustainability and climate action in Africa."],
- ["Deluchi Art and Craft","deluchiartandcraft.com","WordPress","Online store for sculptures, paintings and Ankara accessories."],
- ["Mogtech Group","mogtech-group.com.ng","WordPress","Holding company with member companies across Nigerian sectors."],
- ["Wilstech Global","wilstechglobal.com.ng","WordPress","Machines for pure and bottled water production and packaging."],
- ["HealthShare Nigeria","healthsharenigeria.com","WordPress","Medical equipment and healthcare solutions for private and public sectors."],
- ["TCIS Africa","tcisafrica.org","WordPress","Network for researchers, CROs, regulators and academia in clinical trials."],
- ["Alkanes Energy","alkanesenergy.com.ng","WordPress","Support services for upstream oil and gas in Nigeria and West Africa."],
- ["Cybercloud","cybercloud.net.ng","WordPress","Cloud computing services: IaaS, SaaS and PaaS."],
- ["MyPlace.ng","myplace.ng","WordPress","Online real estate marketplace connecting seekers with agents and developers."],
- ["Kenneth Abuah Consult","kennethabuahconsult.ng","WordPress","Estate surveyors and valuers offering real estate services."],
- ["Cometstar Group","cometstar-group.com","WordPress","Group active in electrical power, industrial gases and mining."]
+ ["Childify","join-childify.com","Full-Stack","A digital staffing platform for the childcare industry.","childify"],
+ ["AfriTrials Connect","afritrialsconnect.com","Full-Stack","Connects clinical research sites to cut costs and timelines.","afritrials"],
+ ["CyberPay","cyberpay.net.ng","Backend","Payment platform helping Nigerian businesses process payments securely.","cyberpay"],
+ ["Build on the Go","buildonthego.com","Backend","Platform that streamlines construction projects with technology and professional services.","buildongo"],
+ ["AllDrive SOS","alldrivesos.com","Backend","Roadside assistance platform connecting motorists with technicians.","alldrive-sos"],
+ ["Pika Boo","mypikaboo.com","Backend","Lets users schedule and manage waste pick-ups from any location.","pikaboo"],
+ ["MyWishlistNG","mywishlistng.com","Backend","Personalized online gift registries for individuals and couples.","mywishlist"],
+ ["Announcers.ng","announcers.ng","Backend","Digital tools for event management and business promotion.","announcers"],
+ ["5M Logistics","5mlogistics.com","Backend","Logistics and freight services for clients worldwide.","5m-logistics"],
+ ["Ndi Igbo Germany","ndiigbogermany.org","Backend","Community site promoting Igbo culture and unity in Germany.","ndi-gbo"],
+ ["Scouting Africa","scoutingafrica.com","Website","A platform where talented people can be seen, supported and managed.","scouting-africa"],
+ ["Cyberspace Limited","cyberspace.net.ng","WordPress","Site for a Nigerian technology company offering IT solutions.","cyberspace"],
+ ["Everest Spa","everestspa.com.ng","WordPress","Professional spa treatments brought to homes, hotels and events.","everest"],
+ ["Wines and Things","winesandthings.com","WordPress","Wines and related products for enthusiasts and events.","wines-and-things"],
+ ["Bonak Homes","bonakhomes.com","WordPress","Nigerian real estate firm: property sales, rentals and management.","bonak"],
+ ["Environment Africa Magazine","environmentafricamag.com","WordPress","Magazine on environmental sustainability and climate action in Africa.","environment-africa"],
+ ["Deluchi Art and Craft","deluchiartandcraft.com","WordPress","Online store for sculptures, paintings and Ankara accessories.","deluchi-art"],
+ ["Mogtech Group","mogtech-group.com.ng","WordPress","Holding company with member companies across Nigerian sectors.","mogtech"],
+ ["Wilstech Global","wilstechglobal.com.ng","WordPress","Machines for pure and bottled water production and packaging.","wistech"],
+ ["HealthShare Nigeria","healthsharenigeria.com","WordPress","Medical equipment and healthcare solutions for private and public sectors.","health-share"],
+ ["TCIS Africa","tcisafrica.org","WordPress","Network for researchers, CROs, regulators and academia in clinical trials.","tcis"],
+ ["Alkanes Energy","alkanesenergy.com.ng","WordPress","Support services for upstream oil and gas in Nigeria and West Africa.","alkanes-energy"],
+ ["Cybercloud","cybercloud.net.ng","WordPress","Cloud computing services: IaaS, SaaS and PaaS.","cybercloud"],
+ ["MyPlace.ng","myplace.ng","WordPress","Online real estate marketplace connecting seekers with agents and developers.","myplace"],
+ ["Kenneth Abuah Consult","kennethabuahconsult.ng","WordPress","Estate surveyors and valuers offering real estate services.","kenneth"],
+ ["Cometstar Group","cometstar-group.com","WordPress","Group active in electrical power, industrial gases and mining.","cometstar"]
 ];
+// Graphic designs: add [file name in images/designs, caption]. The section appears once you add one.
+const designs = [
+["call-to-bar-invitation.jpg","Call to Bar ceremony invitation"],
+ ["iphone-16-pro-promo.jpg","iPhone 16 Pro sales flyer"],
+ ["victor-brown-website-ad.jpg","Website design services advert"],
+ ["toniah-handbags.jpg","Fashion handbag promo for Toniah"],
+ ["oraimo-thank-you-post.jpg","Customer thank-you social post for oraimo"],
+ ["getuplugged-flyer.jpg","Tech services flyer for GetUPlugged"],
+ ["shipping-made-easy.jpg","Shipping service promo flyer"],
+ ["landscribe-back-and-better.jpg","Announcement post for LandScribe"],
+ ["bob-laundry-home.jpg","Service flyer for Bob Laundry Home"],
+ ["c-gadgets-handbill.jpg","Handbill for C-Gadgets"],
+ ["choices-movie-poster.jpg","Movie poster for Choices"],
+ ["cold-flames-exchange.jpg","Social post for Cold Flames Exchange"],
+ ["oxgital-november-promo.jpg","Phone mockup promo for Oxgital"],
+ ["easter-he-is-risen.jpg","Easter flyer, He Is Risen"],
+ ["easter-smartwatch.jpg","Easter flyer for a tech brand"],
+ ["new-week-music-player.jpg","Happy New Week social post"],
+ ["new-week-headphones.jpg","Happy New Week social post, headphones"],
+ ["media-tour-announcement.jpg","Media tour announcement flyer"],
+ ["ahl-book-early.jpg","Booking promo flyer for AHL"],
+ ["billboard-mockup.jpg","Billboard mockup"],
+ ["book-cover-mockup.jpg","Book cover mockup, The 7 Laws"],
+ ["food-pack-mockup.jpg","Food pack branding mockup"],
+ ["vanilla-yoghurt-label.jpg","Product label for vanilla yoghurt"],
+];
+if(designs.length){
+ document.getElementById('designs').hidden=false;document.getElementById('navdesigns').hidden=false;
+ document.getElementById('gallery').innerHTML=designs.map(d=>`<li><img src="images/designs/${d[0]}" alt="${d[1]}" loading="lazy"><span>${d[1]}</span></li>`).join('');
+}
 const list=document.getElementById('list'),box=document.getElementById('filters');
 const types=['All',...new Set(projects.map(p=>p[2]))];
 function render(t){
  list.innerHTML=projects.filter(p=>t==='All'||p[2]===t).map(p=>
-  `<li><a href="https://${p[1]}" target="_blank" rel="noopener"><div><h3>${p[0]}</h3><small>${p[1]}</small></div><p>${p[3]}</p><span class="tag">${p[2]}</span></a></li>`).join('');
+  `<li><a href="https://${p[1]}" target="_blank" rel="noopener"><img src="images/projects/${p[4]}.png" alt="Screenshot of ${p[0]} website" loading="lazy" onerror="this.remove()"><div class="pbody"><h3>${p[0]}</h3><small>${p[1]}</small><p>${p[3]}</p><span class="tag">${p[2]}</span></div></a></li>`).join('');
  [...box.children].forEach(b=>b.setAttribute('aria-pressed',b.textContent===t));
 }
 types.forEach(t=>{const b=document.createElement('button');b.textContent=t;b.onclick=()=>render(t);box.appendChild(b)});
