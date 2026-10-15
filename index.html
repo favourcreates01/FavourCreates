@@ -3,167 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Favour Oludoyi (FavourCreates) | Web Developer & Digital Support Specialist</title>
-<meta name="description" content="Portfolio of Favour Oludoyi (FavourCreates), a Web Developer and Digital Support Specialist in Lagos, Nigeria, working with WordPress, WooCommerce, Laravel, Vue and graphic design.">
+<title>Favour Oludoyi | Web Developer & Graphic Designer in Lagos</title>
+<meta name="description" content="Favour Oludoyi is a Web Developer, Graphic Designer and Digital Support Specialist in Lagos, Nigeria. WordPress, WooCommerce, Laravel, Vue, Figma and Photoshop. 25+ live projects.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f2f5f3;--ink:#12261f;--muted:#4d6159;--line:#cfdad4;--accent:#1d4ed8;--accent-ink:#fff;--panel:#fff}
+:root{--navy:#0a1a33;--navy2:#13294b;--bg:#f4f6fb;--ink:#0f1c33;--muted:#51607a;--line:#d6dde9;--blue:#2457ff;--gold:#ffc233;--panel:#fff}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Figtree,system-ui,sans-serif}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 6%}
-h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.1;margin:0}
-nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;flex-wrap:wrap}
-nav b{font:800 20px 'Bricolage Grotesque',sans-serif}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
-nav a{text-decoration:none;font-weight:500}
-nav a:hover{text-decoration:underline}
-.hero{padding:70px 0 60px;border-bottom:1px solid var(--line)}
-.hero h1{font-size:clamp(48px,11vw,128px);font-weight:800;letter-spacing:-.04em}
-.hero p{max-width:34em;font-size:20px;color:var(--muted);margin:22px 0 0}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 6%}
+h1,h2,h3{font-family:'Bricolage Grotesque',Georgia,sans-serif;line-height:1.08;margin:0}
+.top{position:sticky;top:0;z-index:20;background:rgba(10,26,51,.94);backdrop-filter:blur(8px)}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
+.top b{font:800 19px 'Bricolage Grotesque',sans-serif;color:#fff}
+.top ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+.top a{color:#dbe4f7;text-decoration:none;font-weight:500;font-size:15px}
+.top a:hover{color:var(--gold)}
+.hero{background:radial-gradient(900px 400px at 85% 0,#1d3f86 0,transparent 60%),var(--navy);color:#fff;padding:80px 0 70px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:500}
+.badge i{width:9px;height:9px;border-radius:50%;background:#37e08a;display:block}
+.hero h1{font-size:clamp(46px,10vw,112px);font-weight:800;letter-spacing:-.04em;margin:22px 0 8px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.roles{font:600 clamp(20px,3.2vw,30px) 'Bricolage Grotesque',sans-serif;color:#b9c9ee;margin:0}
+.hero p.lead{max-width:36em;font-size:20px;color:#dbe4f7;margin:20px 0 0}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-.btn{display:inline-block;padding:13px 22px;border-radius:6px;text-decoration:none;font-weight:600;border:2px solid var(--accent)}
-.btn.primary{background:var(--accent);color:var(--accent-ink)}
-.btn.ghost{color:var(--accent)}
-section{padding:64px 0;border-bottom:1px solid var(--line)}
-section h2{font-size:clamp(30px,5vw,44px);margin-bottom:26px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
-.two p{margin:0 0 14px}
-.stats{display:flex;gap:36px;flex-wrap:wrap;margin-top:8px}
-.stats strong{display:block;font:800 36px 'Bricolage Grotesque',sans-serif;color:var(--accent)}
-.stats span{color:var(--muted);font-size:15px}
+.btn{display:inline-block;padding:14px 24px;border-radius:8px;text-decoration:none;font-weight:600;border:2px solid var(--gold)}
+.btn.primary{background:var(--gold);color:var(--navy)}
+.btn.ghost{color:#fff;border-color:rgba(255,255,255,.45)}
+.btn:hover{transform:translateY(-2px)}
+.strip{background:var(--navy2);color:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;padding-top:26px;padding-bottom:26px}
+.strip strong{display:block;font:800 34px 'Bricolage Grotesque',sans-serif;color:var(--gold)}
+.strip span{font-size:14px;color:#b9c9ee}
+section{padding:70px 0}
+section h2{font-size:clamp(30px,5vw,46px);margin-bottom:12px}
+.sub{color:var(--muted);max-width:38em;margin:0 0 32px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:26px}
+.card h3{font-size:22px;margin-bottom:8px}
+.card p{margin:0;color:var(--muted)}
+.card small{display:block;margin-top:12px;color:var(--blue);font-weight:600;font-size:14px}
+.dark{background:var(--navy);color:#fff}
+.dark .sub{color:#b9c9ee}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+.filters button{font:600 15px Figtree,sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.projects{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
+.projects a{display:block;height:100%;background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;transition:transform .2s,box-shadow .2s}
+.projects a:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,28,51,.14)}
+.projects img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--line)}
+.pbody{padding:16px 18px 20px}
+.projects h3{font-size:20px}
+.projects small{display:block;color:var(--blue);font-weight:500;font-size:14px;word-break:break-all;margin-bottom:8px}
+.projects p{margin:0 0 12px;color:var(--muted);font-size:16px}
+.tag{font-size:13px;font-weight:600;border:1.5px solid var(--line);border-radius:999px;padding:3px 12px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px;margin:0;padding:0;list-style:none}
+.gallery button{all:unset;cursor:zoom-in;display:block;width:100%}
+.gallery img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid rgba(255,255,255,.15);transition:transform .2s}
+.gallery button:hover img{transform:scale(1.03)}
+.gallery span{display:block;margin-top:8px;color:#b9c9ee;font-size:15px}
+dialog{border:0;border-radius:12px;padding:0;max-width:min(92vw,760px);background:#fff}
+dialog::backdrop{background:rgba(5,12,25,.8)}
+dialog img{display:block;max-width:100%;max-height:80vh;margin:0 auto}
+dialog p{margin:0;padding:12px 18px;font-weight:600}
+dialog form{text-align:right;padding:8px}
+dialog button{font:600 15px Figtree,sans-serif;padding:6px 14px;border-radius:6px;border:1px solid var(--line);background:#fff;cursor:pointer}
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px}
 .skills h3{font-size:19px;margin-bottom:8px}
 .skills p{margin:0;color:var(--muted)}
 .jobs{list-style:none;margin:0;padding:0}
-.jobs li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--line)}
+.jobs li{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:20px 0;border-top:1px solid var(--line)}
 .jobs li:last-child{border-bottom:1px solid var(--line)}
 .jobs time{color:var(--muted)}
-.jobs h3{font-size:20px}
-.jobs p{margin:2px 0 0;color:var(--muted)}
-.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
-.filters button{font:600 15px Figtree,sans-serif;padding:9px 16px;border-radius:999px;border:1.5px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer}
-.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.projects{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:24px}
-.projects a{display:block;height:100%;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;transition:transform .2s,border-color .2s}
-.projects a:hover{transform:translateY(-3px);border-color:var(--accent)}
-.projects img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;background:var(--line)}
-.pbody{padding:16px 18px 20px}
-.projects h3{font-size:20px}
-.projects small{display:block;color:var(--accent);font-weight:500;font-size:14px;word-break:break-all;margin-bottom:8px}
-.projects p{margin:0 0 12px;color:var(--muted);font-size:16px}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;margin:0;padding:0;list-style:none}
-.gallery img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line)}
-.gallery span{display:block;margin-top:6px;color:var(--muted);font-size:15px}
-.tag{font-size:14px;font-weight:600;border:1.5px solid var(--line);border-radius:999px;padding:3px 12px;white-space:nowrap}
-.contact a{color:var(--accent);font-weight:600}
-.contact ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
-footer{padding:30px 0;color:var(--muted);font-size:15px}
+.jobs h3{font-size:21px}
+.jobs p{margin:4px 0 0;color:var(--muted)}
+.jobs b{color:var(--ink)}
+.cta{background:linear-gradient(135deg,var(--blue),#1a2fa8);color:#fff;text-align:center}
+.cta h2{font-size:clamp(32px,6vw,58px)}
+.cta p{max-width:32em;margin:12px auto 0;color:#dbe4ff;font-size:19px}
+.cta .btns{justify-content:center}
+.cta .btn.ghost{border-color:rgba(255,255,255,.6)}
+.cta ul{list-style:none;padding:0;margin:26px 0 0;color:#dbe4ff;font-size:15px}
+footer{background:var(--navy);color:#b9c9ee;padding:26px 0;font-size:15px;text-align:center}
 @media(max-width:720px){
- .two{grid-template-columns:1fr}
+ .strip .wrap{grid-template-columns:1fr 1fr}
  .jobs li{grid-template-columns:1fr;gap:2px}
- .tag{justify-self:start}
+ .hero{padding:56px 0 50px}
 }
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
- <nav aria-label="Main">
-  <b>FavourCreates</b>
-  <ul>
-   <li><a href="#about">About</a></li>
-   <li><a href="#skills">Skills</a></li>
-   <li><a href="#experience">Experience</a></li>
-   <li><a href="#education">Education</a></li>
-   <li><a href="#projects">Projects</a></li>
-   <li id="navdesigns" hidden><a href="#designs">Designs</a></li>
-   <li><a href="#contact">Contact</a></li>
-  </ul>
- </nav>
+<div class="top"><div class="wrap">
+ <b>Favour Oludoyi</b>
+ <ul>
+  <li><a href="#services">Services</a></li>
+  <li><a href="#projects">Websites</a></li>
+  <li id="navdesigns" hidden><a href="#designs">Designs</a></li>
+  <li><a href="#experience">Experience</a></li>
+  <li><a href="#contact">Contact</a></li>
+ </ul>
+</div></div>
 
- <header class="hero">
-  <h1>FavourCreates</h1>
-  <p>Favour Oludoyi, Web Developer and Digital Support Specialist in Lagos. I build and maintain websites and web apps, from WordPress and WooCommerce to Laravel back ends, and bring a graphic design eye to every project.</p>
-  <div class="btns">
-   <a class="btn primary" href="#projects">See my work</a>
-   <a class="btn ghost" href="mailto:favourcreates01@gmail.com">Hire me</a>
-  </div>
- </header>
+<header class="hero"><div class="wrap">
+ <span class="badge"><i></i>Available for freelance and full-time roles</span>
+ <h1>Favour <em>Oludoyi</em></h1>
+ <p class="roles">Web Developer &middot; Graphic Designer &middot; Digital Support Specialist</p>
+ <p class="lead">I build fast WordPress, WooCommerce and Laravel websites, then design the flyers, brand visuals and mockups that make them stand out. One person for the code and the creative, based in Lagos.</p>
+ <div class="btns">
+  <a class="btn primary" href="#projects">See my websites</a>
+  <a class="btn ghost" href="#designs">See my designs</a>
+  <a class="btn ghost" href="mailto:favourcreates01@gmail.com">Hire me</a>
+ </div>
+</div></header>
 
- <section id="about">
-  <h2>About</h2>
-  <div class="two">
-   <div>
-    <p>I'm a Web Developer and Digital Support Specialist with extensive experience in WordPress, WooCommerce, IT support and digital administration.</p>
-    <p>With a strong background in graphic design using Canva, Figma, CorelDRAW and Photoshop, I bridge creative design with technical execution. I build and maintain digital experiences that support operational efficiency and put users first.</p>
-   </div>
-   <div class="stats">
-    <div><strong>2020</strong><span>building professionally since</span></div>
-    <div><strong id="count">25+</strong><span>live projects</span></div>
-    <div><strong>30%</strong><span>traffic and engagement increase on a company site</span></div>
-   </div>
-  </div>
- </section>
+<div class="strip"><div class="wrap">
+ <div><strong>6+</strong><span>years building for the web</span></div>
+ <div><strong id="count">25+</strong><span>live websites and apps</span></div>
+ <div><strong id="dcount">20+</strong><span>graphic designs</span></div>
+ <div><strong>30%</strong><span>traffic and engagement lift on a company site</span></div>
+</div></div>
 
- <section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-   <div><h3>Front end</h3><p>HTML5, CSS3, JavaScript, jQuery, Vue, Bootstrap, Tailwind CSS, AJAX</p></div>
-   <div><h3>Back end</h3><p>PHP, Laravel, REST APIs, GraphQL, MySQL, PostgreSQL, MongoDB</p></div>
-   <div><h3>WordPress</h3><p>Custom themes and plugins, WooCommerce, Elementor, Visual Composer</p></div>
-   <div><h3>Design</h3><p>Canva, Figma, CorelDRAW, Adobe Photoshop, UI/UX design</p></div>
-   <div><h3>Tools</h3><p>Git, Docker, IT support, digital administration</p></div>
-  </div>
- </section>
+<section id="services"><div class="wrap">
+ <h2>What I do</h2>
+ <p class="sub">Most teams need a developer and a designer. You get both in one hire, so your website and your brand always look like they belong together.</p>
+ <div class="cards">
+  <div class="card"><h3>Web development</h3><p>Custom WordPress themes and plugins, WooCommerce stores, and Laravel and PHP back ends with MySQL or PostgreSQL. Fast, responsive and built to be maintained.</p><small>WordPress &middot; Laravel &middot; Vue &middot; JavaScript</small></div>
+  <div class="card"><h3>Graphic design</h3><p>Flyers, social media posts, brand visuals, handbills, billboards and product mockups that look sharp and sell. From idea to finished artwork.</p><small>Figma &middot; Photoshop &middot; CorelDRAW &middot; Canva</small></div>
+  <div class="card"><h3>Digital support</h3><p>IT support, website management, hosting advice and digital administration, so your online presence stays up, secure and running smoothly.</p><small>Support &middot; Hosting &middot; Maintenance</small></div>
+ </div>
+</div></section>
 
- <section id="experience">
-  <h2>Experience</h2>
-  <ul class="jobs">
-   <li><time>2020 – Present</time><div><h3>Full Stack Developer</h3><p>Favour Creates, Lagos. A development, consulting and software solutions company.</p><p>Cut server response time by 15% with a GraphQL API, used Vue JS to improve user experience by 20%, led PostgreSQL and MySQL database migration and maintenance, ran code reviews, and managed Git version control across front-end and back-end teams.</p></div></li>
-   <li><time>2020 – Present</time><div><h3>WordPress Developer</h3><p>Clinique Research Ltd / TCIS Africa, Lagos. A fully integrated research organization.</p><p>Increased web traffic and content engagement by 30%, built fast-loading sites with page speed scores above 80%, developed custom themes and plugins, built pages with Elementor and Visual Composer, and managed all of the company's websites.</p></div></li>
-  </ul>
- </section>
+<section id="projects" style="padding-top:0"><div class="wrap">
+ <h2>Websites I've built</h2>
+ <p class="sub">Live projects for real businesses. Click any card to visit the site.</p>
+ <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
+ <ul class="projects" id="list"></ul>
+</div></section>
 
- <section id="education">
-  <h2>Education and training</h2>
-  <ul class="jobs">
-   <li><time>2014 – 2018</time><div><h3>BSc Information Technology</h3><p>Lagos State University</p></div></li>
-   <li><time>Course</time><div><h3>Front-end Application Development with Vue</h3><p>Udemy</p></div></li>
-  </ul>
- </section>
+<section id="designs" class="dark" hidden><div class="wrap">
+ <h2>Graphic design</h2>
+ <p class="sub">Flyers, social posts, mockups and brand visuals I've designed for clients. Tap a design to enlarge it.</p>
+ <ul class="gallery" id="gallery"></ul>
+</div></section>
+<dialog id="viewer"><img id="vimg" alt=""><p id="vcap"></p><form method="dialog"><button>Close</button></form></dialog>
 
- <section id="projects">
-  <h2>Projects</h2>
-  <div class="filters" id="filters" role="group" aria-label="Filter projects"></div>
-  <ul class="projects" id="list"></ul>
- </section>
+<section id="skills"><div class="wrap">
+ <h2>Skills and tools</h2>
+ <p class="sub">The stack I use every day.</p>
+ <div class="skills">
+  <div><h3>Front end</h3><p>HTML5, CSS3, JavaScript, jQuery, Vue, Bootstrap, Tailwind CSS, AJAX</p></div>
+  <div><h3>Back end</h3><p>PHP, Laravel, REST APIs, GraphQL, MySQL, PostgreSQL, MongoDB</p></div>
+  <div><h3>WordPress</h3><p>Custom themes and plugins, WooCommerce, Elementor, Visual Composer</p></div>
+  <div><h3>Design</h3><p>Canva, Figma, CorelDRAW, Adobe Photoshop, UI/UX design</p></div>
+  <div><h3>Tools</h3><p>Git, Docker, IT support, digital administration</p></div>
+ </div>
+</div></section>
 
- <section id="designs" hidden>
-  <h2>Graphic design</h2>
-  <ul class="gallery" id="gallery"></ul>
- </section>
+<section id="experience" style="padding-top:0"><div class="wrap">
+ <h2>Experience</h2>
+ <ul class="jobs">
+  <li><time>2024 &ndash; 2026</time><div><h3>Senior WordPress / Full-Stack Developer</h3><p><b>Bilcron Digital</b></p><p>Built and maintained WordPress and full-stack websites and web applications, including custom themes, WooCommerce solutions and PHP and Laravel development.</p></div></li>
+  <li><time>2020 &ndash; Present</time><div><h3>Full Stack Developer</h3><p><b>Favour Creates, Lagos</b>. A development, consulting and software solutions company.</p><p>Cut server response time by 15% with a GraphQL API, used Vue JS to improve user experience by 20%, led PostgreSQL and MySQL database migration and maintenance, ran code reviews, and managed Git version control across front-end and back-end teams.</p></div></li>
+  <li><time>2020 &ndash; Present</time><div><h3>WordPress Developer</h3><p><b>Clinique Research Ltd / TCIS Africa, Lagos</b>. A fully integrated research organization.</p><p>Increased web traffic and content engagement by 30%, built fast-loading sites with page speed scores above 80%, developed custom themes and plugins, built pages with Elementor and Visual Composer, and managed all of the company's websites.</p></div></li>
+  <li><time>2014 &ndash; 2018</time><div><h3>BSc Information Technology</h3><p><b>Lagos State University</b></p></div></li>
+  <li><time>Course</time><div><h3>Front-end Application Development with Vue</h3><p><b>Udemy</b></p></div></li>
+ </ul>
+</div></section>
 
- <section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Available for freelance work and new roles. Tell me about your project.</p>
-  <ul>
-   <li>Email: <a href="mailto:favourcreates01@gmail.com">favourcreates01@gmail.com</a></li>
-   <li>Phone: <a href="tel:+2349034653514">+234 903 465 3514</a></li>
-   <li>LinkedIn: <a href="https://www.linkedin.com/in/favour-oludoyi-917a02169/">linkedin.com/in/favour-oludoyi-917a02169</a></li>
-   <li>Location: Lagos, Nigeria</li>
-  </ul>
- </section>
+<section id="contact" class="cta"><div class="wrap">
+ <h2>Let's build something people remember.</h2>
+ <p>Need a website, a brand look, or a developer who can also design? Tell me about your project and I'll reply fast.</p>
+ <div class="btns">
+  <a class="btn primary" href="mailto:favourcreates01@gmail.com">Email me</a>
+  <a class="btn ghost" href="https://wa.me/2349034653514">WhatsApp</a>
+  <a class="btn ghost" href="https://www.linkedin.com/in/favour-oludoyi-917a02169/">LinkedIn</a>
+ </div>
+ <ul><li>favourcreates01@gmail.com &middot; +234 903 465 3514 &middot; Lagos, Nigeria</li></ul>
+</div></section>
 
- <footer>© 2026 Favour Oludoyi (FavourCreates). Lagos, Nigeria.</footer>
-</div>
+<footer>&copy; 2026 Favour Oludoyi. Web Developer and Graphic Designer.</footer>
 
 <script>
-// To add a project, copy one line below: [name, website, type, description, image file name (without .png)]
 const projects = [
  ["Childify","join-childify.com","Full-Stack","A digital staffing platform for the childcare industry.","childify"],
  ["AfriTrials Connect","afritrialsconnect.com","Full-Stack","Connects clinical research sites to cut costs and timelines.","afritrials"],
@@ -192,7 +217,6 @@ const projects = [
  ["Kenneth Abuah Consult","kennethabuahconsult.ng","WordPress","Estate surveyors and valuers offering real estate services.","kenneth"],
  ["Cometstar Group","cometstar-group.com","WordPress","Group active in electrical power, industrial gases and mining.","cometstar"]
 ];
-// Graphic designs: add [file name in images/designs, caption]. The section appears once you add one.
 const designs = [
 ["call-to-bar-invitation.jpg","Call to Bar ceremony invitation"],
  ["iphone-16-pro-promo.jpg","iPhone 16 Pro sales flyer"],
@@ -220,7 +244,13 @@ const designs = [
 ];
 if(designs.length){
  document.getElementById('designs').hidden=false;document.getElementById('navdesigns').hidden=false;
- document.getElementById('gallery').innerHTML=designs.map(d=>`<li><img src="images/designs/${d[0]}" alt="${d[1]}" loading="lazy"><span>${d[1]}</span></li>`).join('');
+ document.getElementById('dcount').textContent=designs.length+'+';
+ const g=document.getElementById('gallery');
+ g.innerHTML=designs.map((d,i)=>`<li><button data-i="${i}" aria-label="Enlarge: ${d[1]}"><img src="images/designs/${d[0]}" alt="${d[1]}" loading="lazy"><span>${d[1]}</span></button></li>`).join('');
+ const v=document.getElementById('viewer');
+ g.onclick=e=>{const b=e.target.closest('button');if(!b)return;const d=designs[b.dataset.i];
+  document.getElementById('vimg').src='images/designs/'+d[0];document.getElementById('vimg').alt=d[1];document.getElementById('vcap').textContent=d[1];v.showModal()};
+ v.onclick=e=>{if(e.target===v)v.close()};
 }
 const list=document.getElementById('list'),box=document.getElementById('filters');
 const types=['All',...new Set(projects.map(p=>p[2]))];
